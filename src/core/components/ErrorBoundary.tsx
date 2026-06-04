@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components -- error boundary co-locates its fallback component by design */
 import { Component, type ErrorInfo, type ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 
@@ -11,13 +12,7 @@ interface State {
   error: Error | null
 }
 
-function ErrorFallback({
-  error,
-  onReset,
-}: {
-  error: Error | null
-  onReset: () => void
-}) {
+function ErrorFallback({ error, onReset }: { error: Error | null; onReset: () => void }) {
   const { t } = useTranslation()
 
   return (

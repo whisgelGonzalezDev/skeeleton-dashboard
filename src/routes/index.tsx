@@ -1,7 +1,5 @@
-import {
-  createBrowserRouter,
-  type RouteObject,
-} from 'react-router-dom'
+/* eslint-disable react-refresh/only-export-components -- route module exports the router config alongside helpers by design */
+import { createBrowserRouter, type RouteObject } from 'react-router-dom'
 import { DashboardLayout } from '@/layout/DashboardLayout'
 import { LoginPage } from '@/features/auth/LoginPage'
 import { SalesDashboardPage } from '@/features/sales/SalesDashboardPage'

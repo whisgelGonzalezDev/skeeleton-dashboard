@@ -9,8 +9,7 @@ export function LanguageSelector() {
   const ref = useRef<HTMLDivElement>(null)
 
   const current =
-    SUPPORTED_LANGUAGES.find((l) => l.code === i18n.resolvedLanguage) ??
-    SUPPORTED_LANGUAGES[0]
+    SUPPORTED_LANGUAGES.find((l) => l.code === i18n.resolvedLanguage) ?? SUPPORTED_LANGUAGES[0]
 
   const handleSelect = (code: SupportedLocale) => {
     i18n.changeLanguage(code)
@@ -42,9 +41,7 @@ export function LanguageSelector() {
         aria-label={`Language: ${current.label}`}
       >
         <Globe size={16} className="shrink-0" />
-        <span className="text-xs font-medium tracking-wide">
-          {current.code.toUpperCase()}
-        </span>
+        <span className="text-xs font-medium tracking-wide">{current.code.toUpperCase()}</span>
         <ChevronDown
           size={12}
           className={`shrink-0 transition-transform duration-150 ${open ? 'rotate-180' : ''}`}

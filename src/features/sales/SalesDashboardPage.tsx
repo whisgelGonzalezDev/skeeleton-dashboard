@@ -38,7 +38,9 @@ export function SalesDashboardPage() {
 
       <Card padding="none">
         <div className="border-b border-zinc-100 dark:border-zinc-800 px-5 py-4">
-          <h2 className="text-sm font-semibold text-zinc-900 dark:text-white">{t('sales.recentActivity')}</h2>
+          <h2 className="text-sm font-semibold text-zinc-900 dark:text-white">
+            {t('sales.recentActivity')}
+          </h2>
         </div>
 
         {isPending ? (
@@ -80,15 +82,21 @@ function StatCard({ stat, vsLabel }: { stat: SaleStat; vsLabel: string }) {
   return (
     <Card>
       <div className="flex items-start justify-between">
-        <span className="text-xs font-medium text-zinc-500 dark:text-zinc-400">{t(stat.labelKey)}</span>
+        <span className="text-xs font-medium text-zinc-500 dark:text-zinc-400">
+          {t(stat.labelKey)}
+        </span>
         <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-zinc-50 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500">
           <Icon size={16} />
         </span>
       </div>
-      <p className="mt-3 text-2xl font-semibold tracking-tight text-zinc-900 dark:text-white">{stat.value}</p>
+      <p className="mt-3 text-2xl font-semibold tracking-tight text-zinc-900 dark:text-white">
+        {stat.value}
+      </p>
       <div className="mt-2 flex items-center gap-1.5">
         <TrendIcon size={12} className={positive ? 'text-emerald-500' : 'text-red-500'} />
-        <span className={`text-xs font-medium ${positive ? 'text-emerald-600 dark:text-emerald-300' : 'text-red-600 dark:text-red-300'}`}>
+        <span
+          className={`text-xs font-medium ${positive ? 'text-emerald-600 dark:text-emerald-300' : 'text-red-600 dark:text-red-300'}`}
+        >
           {positive ? '+' : ''}
           {stat.change}%
         </span>

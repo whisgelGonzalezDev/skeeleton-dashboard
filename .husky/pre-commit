@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+# Format and lint only staged files, then verify TS compiles.
+npx lint-staged
+npm run typecheck

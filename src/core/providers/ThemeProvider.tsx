@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components -- provider co-locates the useTheme hook by design */
 import {
   createContext,
   useCallback,
@@ -53,15 +54,15 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   // Sync DOM on mount (handles the case where the FOUC script already did it)
   useEffect(() => {
     applyTheme(theme)
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   // Apply DOM change immediately on every theme change after mount
   const toggle = useCallback(() => {
     const next: Theme = themeRef.current === 'dark' ? 'light' : 'dark'
-    applyTheme(next)                        // immediate — no waiting for useEffect
-    localStorage.setItem(THEME_KEY, next)   // persist immediately
-    setTheme(next)                          // schedule React re-render
+    applyTheme(next) // immediate — no waiting for useEffect
+    localStorage.setItem(THEME_KEY, next) // persist immediately
+    setTheme(next) // schedule React re-render
   }, [])
 
   return (

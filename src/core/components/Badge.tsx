@@ -10,16 +10,11 @@ const variantClasses: Record<BadgeVariant, string> = {
   default: 'bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300',
   success: 'bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-400',
   warning: 'bg-amber-50 dark:bg-amber-950 text-amber-700 dark:text-amber-400',
-  danger:  'bg-red-50 dark:bg-red-950 text-red-700 dark:text-red-400',
-  info:    'bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-400',
+  danger: 'bg-red-50 dark:bg-red-950 text-red-700 dark:text-red-400',
+  info: 'bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-400',
 }
 
-export function Badge({
-  variant = 'default',
-  className = '',
-  children,
-  ...props
-}: BadgeProps) {
+export function Badge({ variant = 'default', className = '', children, ...props }: BadgeProps) {
   return (
     <span
       className={[

@@ -119,18 +119,15 @@ export function LoginPage() {
               </p>
             )}
 
-            <Button
-              type="submit"
-              loading={loading}
-              className="w-full"
-              size="lg"
-            >
+            <Button type="submit" loading={loading} className="w-full" size="lg">
               {t('auth.signIn')}
             </Button>
           </form>
 
-          <p className="mt-6 text-center text-xs text-zinc-400 dark:text-zinc-600">
-            Demo: admin@skeeleton.com / password123
+          <p className="mt-6 text-center text-xs leading-relaxed text-zinc-400 dark:text-zinc-600">
+            Demo · admin@skeeleton.dev / skeeleton2026
+            <br />
+            analyst@skeeleton.dev / readOnly2026
           </p>
         </div>
       </main>

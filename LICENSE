@@ -1,21 +1,63 @@
-MIT License
+Skeeleton Base — Commercial License Agreement
+Copyright (c) 2026 whisgel. All rights reserved.
 
-Copyright (c) 2026 whisgel
+This is a legal agreement between you (the "Licensee") and the author
+(the "Author") for the use of the Skeeleton Base source code, assets and
+documentation (the "Product"). By downloading, copying, installing or using
+the Product, you agree to be bound by the terms of this Agreement. If you do
+not agree, do not use the Product.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. GRANT OF LICENSE
+   Upon purchase of a valid license, the Author grants the Licensee a
+   worldwide, non-exclusive, non-transferable license to:
+   a. Use the Product as a starting point to build software applications.
+   b. Modify, adapt and extend the source code for those applications.
+   c. Deploy and distribute the COMPILED/BUILT output of applications built
+      with the Product to end users, including in commercial products.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+   The number of end products you may create depends on the license tier
+   purchased:
+   - Single License: use in ONE (1) end product (commercial or personal).
+   - Extended License: use in UNLIMITED end products by the Licensee.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+2. RESTRICTIONS
+   The Licensee MAY NOT:
+   a. Resell, redistribute, sublicense, lease, rent or share the Product's
+      source code, in whole or in substantial part, as-is or modified,
+      whether for free or for a fee.
+   b. Make the Product (or a derivative that competes with it) available as a
+      template, boilerplate, starter kit, theme or scaffold to third parties.
+   c. Include the Product's source code in an open-source repository or any
+      other publicly accessible location from which the source can be
+      extracted.
+   d. Remove or alter any copyright, trademark or proprietary notices.
+   e. Transfer this license to another party without the Author's written
+      consent.
+
+3. OWNERSHIP
+   The Product is licensed, not sold. The Author retains all right, title and
+   interest in and to the Product, including all intellectual property rights.
+
+4. THIRD-PARTY COMPONENTS
+   The Product includes open-source dependencies that are governed by their
+   own licenses. This Agreement does not modify the terms of those licenses,
+   which continue to apply to their respective components.
+
+5. NO WARRANTY
+   THE PRODUCT IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+
+6. LIMITATION OF LIABILITY
+   IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE PRODUCT OR THE USE OR OTHER DEALINGS
+   IN THE PRODUCT.
+
+7. TERMINATION
+   This license is effective until terminated. It terminates automatically
+   without notice if the Licensee breaches any term. Upon termination, the
+   Licensee must cease all use of the Product's source code and destroy all
+   copies.
+
+For licensing inquiries, extended licenses or custom terms, contact the Author.

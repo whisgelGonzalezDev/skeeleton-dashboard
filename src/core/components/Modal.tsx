@@ -64,13 +64,7 @@ function ModalRoot({ open, onClose, children, size = 'md' }: ModalProps) {
   )
 }
 
-function ModalHeader({
-  children,
-  onClose,
-}: {
-  children: ReactNode
-  onClose?: () => void
-}) {
+function ModalHeader({ children, onClose }: { children: ReactNode; onClose?: () => void }) {
   return (
     <div className="flex items-center justify-between border-b border-zinc-100 dark:border-zinc-800 px-5 py-4">
       <h2 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">{children}</h2>
@@ -91,9 +85,7 @@ function ModalHeader({
 }
 
 function ModalBody({ children }: { children: ReactNode }) {
-  return (
-    <div className="px-5 py-4 text-sm text-zinc-600 dark:text-zinc-300">{children}</div>
-  )
+  return <div className="px-5 py-4 text-sm text-zinc-600 dark:text-zinc-300">{children}</div>
 }
 
 function ModalFooter({ children }: { children: ReactNode }) {

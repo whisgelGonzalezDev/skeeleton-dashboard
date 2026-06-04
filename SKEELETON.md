@@ -38,18 +38,18 @@ La app estará disponible en `http://localhost:5173`.
 ### Credenciales de acceso (mock)
 
 ```
-Email:    admin@skeeleton.com
-Password: password123
+SuperAdmin → admin@skeeleton.dev   / skeeleton2026
+Viewer     → analyst@skeeleton.dev / readOnly2026
 ```
 
 ### Comandos disponibles
 
-| Comando | Acción |
-|---|---|
-| `npm run dev` | Servidor de desarrollo con HMR |
-| `npm run build` | Build de producción (`tsc` + Vite) |
-| `npm run preview` | Preview del build de producción |
-| `npm run lint` | ESLint sobre todo el proyecto |
+| Comando           | Acción                             |
+| ----------------- | ---------------------------------- |
+| `npm run dev`     | Servidor de desarrollo con HMR     |
+| `npm run build`   | Build de producción (`tsc` + Vite) |
+| `npm run preview` | Preview del build de producción    |
+| `npm run lint`    | ESLint sobre todo el proyecto      |
 
 ### Variables de entorno (opcionales)
 
@@ -65,7 +65,7 @@ VITE_API_BASE_URL=https://api.tu-dominio.com
 
 ## Arquitectura
 
-El proyecto sigue **Screaming Architecture**: la estructura de carpetas grita *qué hace* la app, no *cómo está construida*.
+El proyecto sigue **Screaming Architecture**: la estructura de carpetas grita _qué hace_ la app, no _cómo está construida_.
 
 ```
 src/
@@ -127,9 +127,7 @@ export function ProductsPage() {
   const { t } = useTranslation()
   return (
     <div className="space-y-6">
-      <h1 className="text-xl font-semibold text-zinc-900 dark:text-white">
-        {t('products.title')}
-      </h1>
+      <h1 className="text-xl font-semibold text-zinc-900 dark:text-white">{t('products.title')}</h1>
       <ProductTable />
     </div>
   )
@@ -196,7 +194,7 @@ function MyComponent() {
 
   const handleSave = async () => {
     await saveData()
-    notify.success('common.savedSuccessfully')  // clave de i18n
+    notify.success('common.savedSuccessfully') // clave de i18n
     notify.error('common.error')
     notify.info('common.info')
   }
@@ -234,12 +232,8 @@ function MyFeature() {
       <button onClick={() => setOpen(true)}>Abrir</button>
 
       <Modal open={open} onClose={() => setOpen(false)} size="md">
-        <Modal.Header onClose={() => setOpen(false)}>
-          Crear producto
-        </Modal.Header>
-        <Modal.Body>
-          {/* formulario */}
-        </Modal.Body>
+        <Modal.Header onClose={() => setOpen(false)}>Crear producto</Modal.Header>
+        <Modal.Body>{/* formulario */}</Modal.Body>
         <Modal.Footer>
           <button onClick={() => setOpen(false)}>Cancelar</button>
           <button>Guardar</button>
@@ -295,17 +289,17 @@ El cliente HTTP está en `src/core/utils/apiClient.ts` y lee `VITE_API_BASE_URL`
 
 ## Stack completo
 
-| Capa | Librería | Versión |
-|---|---|---|
-| UI framework | React | 18.3 |
-| Build tool | Vite | 5.4 |
-| Lenguaje | TypeScript | 5.5 |
-| Estilos | Tailwind CSS | 3.4 |
-| Routing | React Router | 6.26 |
-| Server state | TanStack Query | 5.56 |
-| i18n | i18next + react-i18next | 23/15 |
-| Íconos | Lucide React | 0.447 |
-| Toasts | Sonner | latest |
+| Capa         | Librería                | Versión |
+| ------------ | ----------------------- | ------- |
+| UI framework | React                   | 18.3    |
+| Build tool   | Vite                    | 5.4     |
+| Lenguaje     | TypeScript              | 5.5     |
+| Estilos      | Tailwind CSS            | 3.4     |
+| Routing      | React Router            | 6.26    |
+| Server state | TanStack Query          | 5.56    |
+| i18n         | i18next + react-i18next | 23/15   |
+| Íconos       | Lucide React            | 0.447   |
+| Toasts       | Sonner                  | latest  |
 
 ---
 

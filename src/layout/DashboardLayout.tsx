@@ -1,16 +1,7 @@
 import { useState } from 'react'
 import { NavLink, Outlet, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import {
-  Home,
-  BarChart2,
-  ShoppingCart,
-  Users,
-  Settings,
-  LogOut,
-  PanelLeft,
-  X,
-} from 'lucide-react'
+import { Home, BarChart2, ShoppingCart, Users, Settings, LogOut, PanelLeft, X } from 'lucide-react'
 import { useAuth } from '@/features/auth/hooks/useAuth'
 import { useNotify } from '@/core/hooks/useNotify'
 import { LanguageSelector } from '@/core/components'
@@ -104,7 +95,9 @@ export function DashboardLayout() {
         <div className="border-t border-zinc-100 dark:border-zinc-800 p-2">
           {!collapsed && user && (
             <div className="px-3 py-2 mb-1">
-              <p className="text-xs font-medium text-zinc-900 dark:text-white truncate">{user.name}</p>
+              <p className="text-xs font-medium text-zinc-900 dark:text-white truncate">
+                {user.name}
+              </p>
               <p className="text-xs text-zinc-400 dark:text-zinc-500 truncate">{user.email}</p>
             </div>
           )}

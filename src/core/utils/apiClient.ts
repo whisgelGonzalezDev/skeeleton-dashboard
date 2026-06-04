@@ -28,9 +28,7 @@ async function request<T>(
   const url = new URL(`${BASE_URL}${endpoint}`, window.location.origin)
 
   if (params) {
-    Object.entries(params).forEach(([k, v]) =>
-      url.searchParams.set(k, String(v)),
-    )
+    Object.entries(params).forEach(([k, v]) => url.searchParams.set(k, String(v)))
   }
 
   const token = localStorage.getItem('auth_token')

@@ -20,7 +20,7 @@ const fr = {
   sales: {
     title: 'Tableau de Bord des Ventes',
     subtitle: 'Aperçu de vos performances commerciales',
-    totalRevenue: 'Chiffre d\'Affaires',
+    totalRevenue: "Chiffre d'Affaires",
     totalOrders: 'Commandes Totales',
     newCustomers: 'Nouveaux Clients',
     conversionRate: 'Taux de Conversion',
@@ -42,14 +42,14 @@ const fr = {
   },
   errors: {
     notFound: 'Page introuvable',
-    notFoundSubtitle: 'La page que vous recherchez n\'existe pas ou a été déplacée.',
+    notFoundSubtitle: "La page que vous recherchez n'existe pas ou a été déplacée.",
     goBack: '← Retour',
-    somethingWentWrong: 'Une erreur s\'est produite',
+    somethingWentWrong: "Une erreur s'est produite",
     tryAgain: 'Réessayer',
   },
   common: {
     loading: 'Chargement…',
-    error: 'Une erreur s\'est produite',
+    error: "Une erreur s'est produite",
     noData: 'Aucune donnée disponible',
     save: 'Enregistrer',
     cancel: 'Annuler',

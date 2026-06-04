@@ -14,9 +14,7 @@ export function NotFoundPage() {
         <h1 className="text-base font-semibold text-zinc-900 dark:text-zinc-100">
           {t('errors.notFound')}
         </h1>
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">
-          {t('errors.notFoundSubtitle')}
-        </p>
+        <p className="text-sm text-zinc-500 dark:text-zinc-400">{t('errors.notFoundSubtitle')}</p>
         <button
           onClick={() => navigate(-1)}
           className="mt-2 inline-block text-sm font-medium text-zinc-600 dark:text-zinc-400
