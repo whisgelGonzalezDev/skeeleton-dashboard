@@ -4,20 +4,56 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary meta tags -->
+    <title>Skeeleton Base — Production-ready React Admin Dashboard</title>
+    <meta
+      name="description"
+      content="A production-ready React 18 admin dashboard scaffold with authentication, dark mode, i18n, analytics charts, toasts and a clean feature-based architecture."
+    />
+    <meta
+      name="keywords"
+      content="react admin dashboard, react template, vite, typescript, tailwind css, admin panel, boilerplate, dashboard scaffold"
+    />
+    <meta name="author" content="whisgel" />
+    <meta name="theme-color" content="#09090b" />
+    <link rel="canonical" href="https://skeeleton-dashboard.vercel.app/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://skeeleton-dashboard.vercel.app/" />
+    <meta property="og:title" content="Skeeleton Base — Production-ready React Admin Dashboard" />
+    <meta
+      property="og:description"
+      content="Auth, dark mode, i18n, analytics charts and a clean feature-based architecture — out of the box."
+    />
+    <meta property="og:image" content="https://skeeleton-dashboard.vercel.app/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Skeeleton Base" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Skeeleton Base — Production-ready React Admin Dashboard" />
+    <meta
+      name="twitter:description"
+      content="Auth, dark mode, i18n, analytics charts and a clean feature-based architecture — out of the box."
+    />
+    <meta name="twitter:image" content="https://skeeleton-dashboard.vercel.app/og-image.png" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>Skeeleton Base</title>
     <script>
-      (function () {
-        var s = localStorage.getItem('skeeleton_theme');
+      ;(function () {
+        var s = localStorage.getItem('skeeleton_theme')
         if (s === 'dark' || (!s && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-          document.documentElement.classList.add('dark');
+          document.documentElement.classList.add('dark')
         }
-      })();
+      })()
     </script>
   </head>
   <body>

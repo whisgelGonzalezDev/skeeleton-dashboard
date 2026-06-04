@@ -17,7 +17,7 @@ before packaging the product for buyers.
 
 - [x] `.env.example` for the frontend (`VITE_API_BASE_URL`).
 - [x] Demo credentials fixed (code uses `admin@skeeleton.dev` / `skeeleton2026`).
-- [ ] `CHANGELOG.md` (signals active maintenance).
+- [x] `CHANGELOG.md` (Keep a Changelog + SemVer; 1.0.0 entry).
 - [ ] Clarify in docs whether the NestJS `backend/` is included in the sale.
 
 ## 🟢 Quality & tooling
@@ -40,7 +40,7 @@ before packaging the product for buyers.
 
 - [x] Screenshots of every view (login, sales, analytics, users) in light **and** dark.
 - [x] Live demo on Vercel: https://skeeleton-dashboard.vercel.app
-- [ ] SEO/meta in `index.html` (description, favicon, `og:image`).
+- [x] SEO/meta in `index.html` (description, favicon, Open Graph + Twitter image).
 - [ ] Showcase the 4 languages + dark mode as headline features.
 - [ ] Delivery format (ZIP, private repo invite, marketplace listing).
 
