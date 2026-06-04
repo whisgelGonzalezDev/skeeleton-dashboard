@@ -6,7 +6,9 @@
 Auth, dark mode, i18n (4 languages), toasts, error boundaries and a clean
 feature-based architecture — out of the box.
 
-`React 18` · `Vite 5` · `TypeScript 5` · `Tailwind CSS 3` · `React Router 6` · `TanStack Query 5` · `i18next` · `Sonner`
+`React 18` · `Vite 5` · `TypeScript 5` · `Tailwind CSS 3` · `React Router 6` · `TanStack Query 5` · `i18next` · `Recharts` · `Sonner`
+
+[![CI](https://github.com/whisgelGonzalezDev/skeeleton-dashboard/actions/workflows/ci.yml/badge.svg)](https://github.com/whisgelGonzalezDev/skeeleton-dashboard/actions/workflows/ci.yml)
 
 **[🚀 Live demo](https://skeeleton-dashboard.vercel.app/auth/login)** · [Quick start](#quick-start) · [Architecture](#architecture) · [Documentation](SKEELETON.md)
 
@@ -16,15 +18,15 @@ feature-based architecture — out of the box.
 
 <div align="center">
 
-### Sales dashboard — light & dark
+### Analytics — light & dark
 
-<img src="docs/sales-light.png" alt="Sales dashboard (light)" width="49%" />
+<img src="docs/analytics-light.png" alt="Analytics (light)" width="49%" />
+<img src="docs/analytics-dark.png" alt="Analytics (dark)" width="49%" />
+
+### Sales dashboard & users
+
 <img src="docs/sales-dark.png" alt="Sales dashboard (dark)" width="49%" />
-
-### Users & login
-
 <img src="docs/users-light.png" alt="Users (light)" width="49%" />
-<img src="docs/login-dark.png" alt="Login (dark)" width="49%" />
 
 </div>
 
@@ -46,24 +48,27 @@ business logic on day one.
 - 🌍 **i18n** — English, Spanish, French and Portuguese, with browser detection.
 - 🔔 **Toasts** — one `useNotify()` hook, fully translated.
 - 🛡️ **Error boundaries** — a crash in one feature never takes down the app.
+- 📊 **Analytics view** — KPI cards, revenue trend and plan-distribution charts (Recharts), lazy-loaded in its own chunk.
 - 🧩 **Feature-based architecture** — _Screaming Architecture_; the folders tell you what the app does.
 - ⚡ **Mock data layer** — realistic API latency simulation; swap one function for your real backend.
-- 🧰 **Tooling included** — ESLint 9, Prettier, Husky + lint-staged pre-commit hooks.
+- 🧰 **Tooling included** — ESLint 9, Prettier, Vitest, Husky + lint-staged pre-commit hooks, GitHub Actions CI.
 - 🖥️ **Optional NestJS backend** — JWT auth + Drizzle ORM starter in [`backend/`](backend/).
 
 ## Tech stack
 
-| Layer        | Library                 | Version |
-| ------------ | ----------------------- | ------- |
-| UI framework | React                   | 18.3    |
-| Build tool   | Vite                    | 5.4     |
-| Language     | TypeScript              | 5.5     |
-| Styling      | Tailwind CSS            | 3.4     |
-| Routing      | React Router            | 6.26    |
-| Server state | TanStack Query          | 5.56    |
-| i18n         | i18next + react-i18next | 23 / 15 |
-| Icons        | Lucide React            | 0.447   |
-| Toasts       | Sonner                  | 2.0     |
+| Layer        | Library                  | Version |
+| ------------ | ------------------------ | ------- |
+| UI framework | React                    | 18.3    |
+| Build tool   | Vite                     | 5.4     |
+| Language     | TypeScript               | 5.5     |
+| Styling      | Tailwind CSS             | 3.4     |
+| Routing      | React Router             | 6.26    |
+| Server state | TanStack Query           | 5.56    |
+| i18n         | i18next + react-i18next  | 23 / 15 |
+| Charts       | Recharts                 | 2.15    |
+| Icons        | Lucide React             | 0.447   |
+| Toasts       | Sonner                   | 2.0     |
+| Testing      | Vitest + Testing Library | 2 / 16  |
 
 ## Quick start
 
@@ -91,14 +96,16 @@ The app runs at `http://localhost:5173`.
 
 ### Scripts
 
-| Command             | Action                            |
-| ------------------- | --------------------------------- |
-| `npm run dev`       | Dev server with HMR               |
-| `npm run build`     | Production build (`tsc` + Vite)   |
-| `npm run preview`   | Preview the production build      |
-| `npm run lint`      | Lint the whole project (ESLint 9) |
-| `npm run format`    | Format the codebase with Prettier |
-| `npm run typecheck` | Type-check without emitting       |
+| Command                 | Action                            |
+| ----------------------- | --------------------------------- |
+| `npm run dev`           | Dev server with HMR               |
+| `npm run build`         | Production build (`tsc` + Vite)   |
+| `npm run preview`       | Preview the production build      |
+| `npm run lint`          | Lint the whole project (ESLint 9) |
+| `npm run format`        | Format the codebase with Prettier |
+| `npm run typecheck`     | Type-check without emitting       |
+| `npm test`              | Run the unit tests (Vitest)       |
+| `npm run test:coverage` | Run tests with a coverage report  |
 
 ### Environment variables
 
@@ -122,8 +129,9 @@ src/
 │
 ├── features/           # ★ Business logic lives here
 │   ├── auth/           # Login + auth hook
-│   ├── users/          # Users module (table, API, page)
-│   └── sales/          # Sales dashboard
+│   ├── sales/          # Sales dashboard
+│   ├── analytics/      # Analytics view (KPIs + Recharts charts)
+│   └── users/          # Users module (table, API, page)
 │
 ├── layout/             # App shell (sidebar + header)
 ├── routes/             # Router + protected-route guard

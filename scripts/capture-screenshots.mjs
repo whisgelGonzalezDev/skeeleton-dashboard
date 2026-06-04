@@ -29,6 +29,7 @@ const SESSION = JSON.stringify({
 const SHOTS = [
   { route: '/auth/login', auth: false, name: 'login' },
   { route: '/sales', auth: true, name: 'sales' },
+  { route: '/analytics', auth: true, name: 'analytics' },
   { route: '/users', auth: true, name: 'users' },
 ]
 
@@ -55,8 +56,9 @@ for (const theme of ['light', 'dark']) {
 
     const page = await context.newPage()
     await page.goto(`${BASE}${shot.route}`, { waitUntil: 'networkidle' })
-    // Let the mock API latency (simulateApiDelay) resolve and content paint.
-    await page.waitForTimeout(2000)
+    // Let the mock API latency (simulateApiDelay), lazy chunks and chart
+    // mount animations resolve before the shot.
+    await page.waitForTimeout(3500)
 
     const file = join(OUT, `${shot.name}-${theme}.png`)
     await page.screenshot({ path: file })

@@ -30,14 +30,15 @@ before packaging the product for buyers.
 - [x] **Auth consistency fixed** — `useAuth` now validates against the single
       `DEMO_CREDENTIALS` source (admin + viewer roles); login hint and
       `MOCK_USER_PROFILE` aligned (previously three conflicting credential sets).
-- [ ] **Tests** — currently 0. Add Vitest + a few smoke tests (login, dashboard render).
-- [ ] **CI** — add `.github/workflows/ci.yml` (typecheck + lint + build) for a green badge.
-- [ ] Decide whether to commit `package-lock.json` (currently git-ignored — most
-      sold templates ship the lockfile for reproducible installs).
+- [x] **Tests** — Vitest + Testing Library; 12 smoke tests (useAuth, mockData, Badge).
+- [x] **CI** — `.github/workflows/ci.yml` runs lint + typecheck + test + build; badge in README.
+- [x] **Lockfile** — `package-lock.json` un-ignored and committed (required by `npm ci`).
+- [x] **Analytics view** — real `/analytics` page (KPIs, revenue + plan charts via
+      Recharts, activity log), lazy-loaded in its own chunk. Replaces the placeholder.
 
 ## 🔵 Sales assets
 
-- [x] Screenshots of every view (login, sales, users) in light **and** dark.
+- [x] Screenshots of every view (login, sales, analytics, users) in light **and** dark.
 - [x] Live demo on Vercel: https://skeeleton-dashboard.vercel.app
 - [ ] SEO/meta in `index.html` (description, favicon, `og:image`).
 - [ ] Showcase the 4 languages + dark mode as headline features.
@@ -46,13 +47,15 @@ before packaging the product for buyers.
 ## ⚪ Optional (raises perceived value)
 
 - [ ] `Dockerfile` + `docker-compose` (frontend + backend + Postgres).
-- [ ] Extra example views (settings, profile, filterable/paginated table).
+- [x] Extra example view — Analytics dashboard with charts (done).
+- [ ] More example views (settings, profile, filterable/paginated table).
 - [ ] Storybook / catalog of `core/components/`.
 
 ## Recommended order
 
 1. ~~Commercial license~~ ✅
 2. ~~Fix lint + build~~ ✅
-3. ~~README~~ → **screenshots + live demo** (next, highest sales impact)
-4. Tests + CI
-5. Extras (Docker, views, Storybook)
+3. ~~README + screenshots + live demo~~ ✅
+4. ~~Tests + CI~~ ✅
+5. ~~Analytics view~~ ✅
+6. Remaining extras (Docker, more views, Storybook, SEO meta, CHANGELOG)
